@@ -12,9 +12,7 @@ function SensorPage() {
   // Function to fetch the latest sensor data
   const fetchSensorData = async () => {
     try {
-      const response = await axios.get(
-        "https://iot-proj-hm.vercel.app/api/latest-data"
-      );
+      const response = await axios.get("/api/latest-data");
       setSensorData(response.data);
       setLoading(false); // Data is loaded
     } catch (err) {
