@@ -54,12 +54,6 @@ function SensorPage() {
             <strong>Temperature (DS18B20):</strong> {sensorData.tempDS18B20} °C
           </p>
           <p>
-            <strong>Temperature (DHT):</strong> {sensorData.tempDHT} °C
-          </p>
-          <p>
-            <strong>Humidity (DHT):</strong> {sensorData.humDHT} %
-          </p>
-          <p>
             <strong>Last Updated:</strong>{" "}
             {new Date(sensorData.timestamp).toLocaleString()}
           </p>

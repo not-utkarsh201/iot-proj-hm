@@ -1,17 +1,14 @@
-// app/api/sensordata/route.js
 import clientPromise from "@/lib/mongodb";
 
 export async function POST(request) {
   const body = await request.json();
-  const { patientId, heartRate, spo2, tempDS18B20, tempDHT, humDHT } = body;
+  const { patientId, heartRate, spo2, tempDS18B20 } = body;
 
   if (
     !patientId ||
     heartRate === undefined ||
     spo2 === undefined ||
-    tempDS18B20 === undefined ||
-    tempDHT === undefined ||
-    humDHT === undefined
+    tempDS18B20 === undefined
   ) {
     return new Response(
       JSON.stringify({ error: "Missing required sensor data or patientId" }),
@@ -27,8 +24,6 @@ export async function POST(request) {
     heartRate,
     spo2,
     tempDS18B20,
-    tempDHT,
-    humDHT,
     timestamp: new Date().toISOString(),
   };
 
