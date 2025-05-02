@@ -1,3 +1,5 @@
+import Link from "next/link"; // Add this line at the top
+
 import Image from "next/image";
 
 export default function Home() {
