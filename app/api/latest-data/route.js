@@ -1,7 +1,7 @@
 import clientPromise from "@/lib/mongodb";
 
 export async function GET() {
-  const patientId = "1"; // You can replace this with a dynamic parameter if needed
+  const patientId = 1; // You can replace this with a dynamic parameter if needed
 
   try {
     const client = await clientPromise;
